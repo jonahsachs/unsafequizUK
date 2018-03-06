@@ -9,7 +9,7 @@ var page = 0;
 
 function onLoad() {
 
-    document.getElementById("title").innerHTML = "<img src='img/header.png'>";
+    document.getElementById("title").innerHTML = "<img src='img/headerUK.png'>";
     document.getElementById("topContainer").style.display = "none";
     document.getElementById("intro").style.display = "block";
     document.getElementById("results").style.display = "none";
