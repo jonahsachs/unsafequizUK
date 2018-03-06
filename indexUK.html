@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unsafe Thinking Quiz</title>
+    <script src="questionSets.js"></script>
+    <script src="script.js"></script>
+    <script src="process.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+    <meta property="og:url"                content="http://www.jonahsachs.com/diagnostic" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="Are You a Safe or Unsafe Thinker?" />
+    <meta property="og:description"        content="Find out by taking the Unsafe Thinking Diagnostic Quiz!" />
+    <meta property="og:image"              content="https://malbinson.github.io/unsafeQuiz/img/unsafeThinking.png" />
+</head>
+<body onload="onLoad()">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="title"></div>
+
+<div id="intro">
+    <p><b>Looking for more effective ways to face change at work and in your life? Want to
+        help your team be more creative when the stakes are high and time is tight?</b></p>
+
+    <p>This five-minute quiz will reveal what you can do more of and what you should
+    stop doing when it comes to breaking out of the safe thinking habits that most
+    commonly hold us back.</p>
+
+    <p>The diagnostic distills decades of research into the science of creativity and
+    performance as well as more than 100 interviews I conducted with
+    breakthrough unsafe thinkers. There are no right or wrong answers to the
+    following questions. We all think in a mix of safe and unsafe ways and thus all
+    have room to grow our ability to boldly face change.</p>
+
+    <p align="center"><button onclick="createQuestions()" class="btn btn-primary btn-lg">Get Started</button></p>
+    <div align="center" id="bookDisplay">
+
+        <table id="bookTable">
+            <tr>
+                <td><b>Want the book?</b><br><i>Unsafe Thinking: How to be Nimble and Bold When You Need it Most.</i><br><br>
+                    <a href="https://www.amazon.com/Unsafe-Thinking-Nimble-Bold-When/dp/0738220140/ref=sr_1_1"><img src="img/preOrder.png"></a>
+                </td>
+                <td><a href="https://www.amazon.com/Unsafe-Thinking-Nimble-Bold-When/dp/0738220140/ref=sr_1_1"><img src="img/unsafeThinking.png" width="130"></a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+<div id="topContainer">
+
+
+    <div id="qSet0"></div>
+    <div id="qSet1"></div>
+    <div id="qSet2"></div>
+    <div id="qSet3"></div>
+    <div id="progress"></div>
+    <div id="btnSet"></div>
+
+</div>
+
+<div id="results">
+    <p class="descText topText"><b>YOUR RESULTS</b>: Here you’ll find the three most important mindsets that allow
+    people to react boldly and creatively in the face of change. Based on your answers,
+    you’ll also see how regularly you employ each mindset.</p>
+    <hr>
+    <img src="img/explorer.png">
+    <h2>EXPLORER’S MINDSET</h2>
+    <p><h3 id="ex">Your Explorer’s Mindset Score: <span id="explore"></span></h3></p>
+    <p class="descText">Self-identified “experts” like to dwell on what they know.
+    Explorers often have just as much knowledge but they are
+    driven more by curiosity about what they don’t yet know.
+    Those with an Explorer’s Mindset learn more quickly
+    because they have less ego-attachment to a position they
+    took yesterday. They deliberately practice the things
+    they’re weakest at, which is the fastest path to
+    improvement. And they are predisposed to seeing change
+    as a chance to experience something new rather than as a
+    threat to their tried and true ways of operating.</p>
+
+    <hr>
+
+    <img src="img/scientific.png">
+    <h2>SCIENTIFIC MINDSET</h2>
+    <p><h3 id="sc">Your Scientific Mindset Score: <span id="science"></span></h3></p>
+    <p class="descText">Those with a Scientific Mindset are always thinking
+    critically about their own thinking. To be human is to have a
+    host of automatic thoughts and biases — we can’t help it.
+    But the scientific mindset helps us to understand these
+    biases and recognize when they’re trapping you. People
+    with a Scientific Mindset both trust their intuition but also
+    constantly test to see if its signals are authentic or just
+    prejudice in disguise. Those with a scientific mindset
+    instinctively seek out information that might prove their
+    thinking wrong while everyone else looks for evidence
+    they’re right. Thus scientific thinkers are slower to form an
+    opinion but less often get locked in mistaken thinking.</p>
+
+    <hr>
+
+    <img src="img/courageous.png">
+    <h2>COURAGEOUS MINDSET</h2>
+    <p><h3 id="co">Your Courageous  Mindset Score: <span id="courage"></span></h3></p>
+    <p class="descText">People with a Courageous Mindset think counterintuitively
+    about change. Instead of seeing anxiety as something to be
+    avoided, it allows them to see fear as a sign they’re on their
+    creative edge. Rather than seeing conflict as a threat, it
+    exposes the generative power of disagreement and
+    engaging with people who see the world very differently.
+    And instead of seeing rules as ironclad restrictions to
+    always be followed, the Courageous Mindset allows one to
+    engage in “intelligent disobedience” from which
+    breakthroughs so often emerge.</p>
+
+    <hr>
+
+    <table id="finalTable">
+        <tr>
+            <td width="50%">
+
+                <span class="fb-share-button" data-href="http://www.jonahsachs.com/diagnostic" data-layout="button" data-size="large" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.jonahsachs.com%2Fdiagnostic&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></span>
+
+
+            </td>
+            <td>
+
+                <a onclick="openTwitter()" href="#" id="tweetLink"><img src="img/tweet.png" height="40px"></a>
+
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="wideTable">
+        <tr>
+            <td width="20%"><img src="img/check.png"></td>
+            <td align="left">Want to improve your ability to change yourself in order to change your world? Just hit the button
+                 below and I’ll send you the top 3 things you can do to boost each  of the three mindsets.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="http://www.jonahsachs.com/unsafetips"><button class="btn btn-primary btn-lg" style="margin-bottom:30px;">Get the Tips</button></a></td>
+        </tr>
+    </table>
+    <hr>
+    <table class="wideTable">
+        <tr>
+            <td width="20%" valign="top"><img src="img/bookImg.png"></td>
+            <td align="left">My new book is launching April 24, 2018. Adam Grant calls it “enchanting”; Daniel Pink says it “will propel
+                you…onto a path of better, sharper thinking”; and Mary Karr lauds it as “blazingly original.”
+                <br><br>
+                Through stories and science I explore the techniques that allow individuals and teams to thrive in times of change.
+                <table width="100%">
+                    <tr>
+                        <td align="center"><a href="https://www.amazon.com/Unsafe-Thinking-Nimble-Bold-When/dp/0738220140/ref=sr_1_1"><img src="img/preOrder.png"></a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="wideTable">
+        <tr>
+            <td colspan="2"><br><br><button onclick="location.reload()" class="btn btn-primary btn-lg">Start Over</button><br><br><br></td>
+        </tr>
+    </table>
+
+
+</div>
+
+</body>
+</html>
