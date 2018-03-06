@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114990378-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114990378-1');
-</script>
-
- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Unsafe Thinking Quiz</title>
     <script src="questionSets.js"></script>
     <script src="script.js"></script>
@@ -38,18 +28,28 @@
 <div id="title"></div>
 
 <div id="intro">
-    
-    <p>This five-minute quiz will reveal what you can do more or less of in order to break out of the safe thinking habits that most commonly hold back our creativity when we face change at work or in life.</p>
+    <p><b>Looking for more effective ways to face change at work and in your life? Want to
+        help your team be more creative when the stakes are high and time is tight?</b></p>
+
+    <p>This five-minute quiz will reveal what you can do more of and what you should
+    stop doing when it comes to breaking out of the safe thinking habits that most
+    commonly hold us back.</p>
+
+    <p>The diagnostic distills decades of research into the science of creativity and
+    performance as well as more than 100 interviews I conducted with
+    breakthrough unsafe thinkers. There are no right or wrong answers to the
+    following questions. We all think in a mix of safe and unsafe ways and thus all
+    have room to grow our ability to boldly face change.</p>
 
     <p align="center"><button onclick="createQuestions()" class="btn btn-primary btn-lg">Get Started</button></p>
-    <div align="left" id="bookDisplay">
+    <div align="center" id="bookDisplay">
 
         <table id="bookTable">
             <tr>
-                <td><align="left"><b>Want the book?</b><br><i>Unsafe Thinking: How to be Nimble and Bold When You Need it Most.</i><br><br>
-                    <a href="https://www.hachettebookgroup.com/titles/jonah-sachs/unsafe-thinking/9780738220147/"><img src="img/amazon.png" width="160"></a>
+                <td><b>Want the book?</b><br><i>Unsafe Thinking: How to be Nimble and Bold When You Need it Most.</i><br><br>
+                    <a href="https://www.amazon.com/Unsafe-Thinking-Nimble-Bold-When/dp/0738220140/ref=sr_1_1"><img src="img/preOrder.png"></a>
                 </td>
-                <td><a href="https://www.hachettebookgroup.com/titles/jonah-sachs/unsafe-thinking/9780738220147/"><img src="img/unsafeThinking.png" width="130"></a></td>
+                <td><a href="https://www.amazon.com/Unsafe-Thinking-Nimble-Bold-When/dp/0738220140/ref=sr_1_1"><img src="img/unsafeThinking.png" width="130"></a></td>
             </tr>
         </table>
 
@@ -69,20 +69,20 @@
 </div>
 
 <div id="results">
-    <p class="descText topText"><b>YOUR RESULTS</b>: Here you’ll find your score on the three most important mindsets that allow
+    <p class="descText topText"><b>YOUR RESULTS</b>: Here you’ll find the three most important mindsets that allow
     people to react boldly and creatively in the face of change. Based on your answers,
     you’ll also see how regularly you employ each mindset.</p>
     <hr>
     <img src="img/explorer.png">
     <h2>EXPLORER’S MINDSET</h2>
     <p><h3 id="ex">Your Explorer’s Mindset Score: <span id="explore"></span></h3></p>
-    <p class="descText"><br>Self-identified “experts” like to dwell on what they know.
+    <p class="descText">Self-identified “experts” like to dwell on what they know.
     Explorers often have just as much knowledge but they are
     driven more by curiosity about what they don’t yet know.
     Those with an Explorer’s Mindset learn more quickly
     because they have less ego-attachment to a position they
     took yesterday. They deliberately practice the things
-    at which they’re weakest, which is the fastest path to
+    they’re weakest at, which is the fastest path to
     improvement. And they are predisposed to seeing change
     as a chance to experience something new rather than as a
     threat to their tried and true ways of operating.</p>
@@ -92,16 +92,17 @@
     <img src="img/scientific.png">
     <h2>SCIENTIFIC MINDSET</h2>
     <p><h3 id="sc">Your Scientific Mindset Score: <span id="science"></span></h3></p>
-    <p class="descText"><br>Those with a Scientific Mindset are always thinking
+    <p class="descText">Those with a Scientific Mindset are always thinking
     critically about their own thinking. To be human is to have a
     host of automatic thoughts and biases — we can’t help it.
     But the scientific mindset helps us to understand these
-    biases and recognize when they’re trapping us. People
-    with a Scientific Mindset  trust their intuition but also
+    biases and recognize when they’re trapping you. People
+    with a Scientific Mindset both trust their intuition but also
     constantly test to see if its signals are authentic or just
     prejudice in disguise. Those with a scientific mindset
     instinctively seek out information that might prove their
-    thinking wrong. Thus scientific thinkers are slower to form an
+    thinking wrong while everyone else looks for evidence
+    they’re right. Thus scientific thinkers are slower to form an
     opinion but less often get locked in mistaken thinking.</p>
 
     <hr>
@@ -109,11 +110,12 @@
     <img src="img/courageous.png">
     <h2>COURAGEOUS MINDSET</h2>
     <p><h3 id="co">Your Courageous  Mindset Score: <span id="courage"></span></h3></p>
-    <p class="descText"><br>People with a Courageous Mindset think counterintuitively
-    about threats and challenges. Instead of seeing anxiety as something to be
-    avoided, a Courageous Mindset allows them to see fear as a sign they’re on their
-    creative edge. Rather than seeing conflict as a threat, the see the generative power of disagreement and
-    engaging with people who view the world very differently.
+    <p class="descText">People with a Courageous Mindset think counterintuitively
+    about change. Instead of seeing anxiety as something to be
+    avoided, it allows them to see fear as a sign they’re on their
+    creative edge. Rather than seeing conflict as a threat, it
+    exposes the generative power of disagreement and
+    engaging with people who see the world very differently.
     And instead of seeing rules as ironclad restrictions to
     always be followed, the Courageous Mindset allows one to
     engage in “intelligent disobedience” from which
@@ -139,8 +141,9 @@
     <hr>
     <table class="wideTable">
         <tr>
-            <td align="left"><p><b>Want to improve your ability to change yourself in order to change your world? </b>Just hit the button
-                 below and I’ll send you the top 3 things you can do to boost each  of the three mindsets.</p>
+            <td width="20%"><img src="img/check.png"></td>
+            <td align="left">Want to improve your ability to change yourself in order to change your world? Just hit the button
+                 below and I’ll send you the top 3 things you can do to boost each  of the three mindsets.
             </td>
         </tr>
         <tr>
@@ -157,7 +160,7 @@
                 Through stories and science I explore the techniques that allow individuals and teams to thrive in times of change.
                 <table width="100%">
                     <tr>
-                        <td align="center"><a href="https://www.hachettebookgroup.com/titles/jonah-sachs/unsafe-thinking/9780738220147/"><img src="img/amazon.png" width="190"></a></td>
+                        <td align="center"><a href="https://www.amazon.com/Unsafe-Thinking-Nimble-Bold-When/dp/0738220140/ref=sr_1_1"><img src="img/preOrder.png"></a></td>
                     </tr>
                 </table>
             </td>
